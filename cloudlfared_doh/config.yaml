@@ -4,11 +4,8 @@ slug: cloudflare_doh
 description: Cloudflare DoH
 url: https://github.com/jnstockley/Hassio-Addons/tree/main/cloudlfare_doh
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
-  - i386
 init: false
 options:
   port: 53
