@@ -11,7 +11,3 @@ ARG CLOUDFLARED_VERSION="2024.12.1"
 COPY rootfs /
 
 RUN chmod a+x /build.sh && /build.sh "${BUILD_ARCH}" "${CLOUDFLARED_VERSION}"
-
-RUN ls
-
-RUN /startup.sh
