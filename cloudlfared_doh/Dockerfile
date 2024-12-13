@@ -1,5 +1,6 @@
 FROM cloudflare/cloudflared:2024.12.0
 
-COPY startup.sh .
+COPY rootfs /
 
-ENTRYPOINT ["./startup.sh"]
+
+RUN /startup.sh
