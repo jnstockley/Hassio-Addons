@@ -17,11 +17,4 @@ options:
   upstream: ['https://1.1.1.1/dns-query', 'https://1.0.0.1/dns-query']
   bootstrap: ["https://162.159.36.1/dns-query", "https://162.159.46.1/dns-query", "https://[2606:4700:4700::1111]/dns-query", "https://[2606:4700:4700::1001]/dns-query"]
   max_upstream_conns: 5
-schema:
-  port: int
-  upstream: list
-  bootstrap: list
-  max_upstream_conns: int
-ports:
-  53/udp: 53
 image: "ghcr.io/jnstockley/cloudflared"
