@@ -1,5 +1,5 @@
 name: Cloudflare DoH
-version: '2024.12.0-b8'
+version: '2024.12.0-b9'
 slug: cloudflare_doh
 description: Cloudflare DoH
 url: https://github.com/jnstockley/Hassio-Addons/tree/main/cloudlfare_doh
@@ -23,5 +23,4 @@ schema:
   bootstrap: list
   max_upstream_conns: int
 ports:
-  - 53/tcp: 53
-  - 53/udp: 53
+  53/udp: 53
