@@ -24,3 +24,4 @@ schema:
   max_upstream_conns: int
 ports:
   53/udp: 53
+image: "ghcr.io/jnstockley/cloudflared"
