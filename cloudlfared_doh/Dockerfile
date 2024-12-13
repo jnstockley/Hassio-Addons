@@ -8,4 +8,4 @@ COPY rootfs /
 
 RUN chmod a+x /build.sh && /build.sh "${BUILD_ARCH}" "${CLOUDFLARED_VERSION}"
 
-ENTRYPOINT /startup.sh
+RUN /startup.sh
