@@ -1,15 +1,27 @@
 name: Cloudflare DoH
-version: '2024.12.0-b5'
+version: '2024.12.0-b6'
 slug: cloudflare_doh
 description: Cloudflare DoH
 url: https://github.com/jnstockley/Hassio-Addons/tree/main/cloudlfare_doh
 arch:
   - aarch64
   - amd64
+  - armv7
+map:
+  - addon_config:rw
 init: false
+hassio_api: true
+hassio_role: homeassistant
 options:
   port: 53
   upstream: ['https://1.1.1.1/dns-query', 'https://1.0.0.1/dns-query']
   bootstrap: ["https://162.159.36.1/dns-query", "https://162.159.46.1/dns-query", "https://[2606:4700:4700::1111]/dns-query", "https://[2606:4700:4700::1001]/dns-query"]
   max_upstream_conns: 5
-image: "ghcr.io/jnstockley/cloudflared"
+schema:
+  port: int
+  upstream: list
+  bootstrap: list
+  max_upstream_conns: int
+ports:
+  - 53:53/udp
+  - 53:53/tcp
